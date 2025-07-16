@@ -1,38 +1,86 @@
-// words vs keywords 
+// ✅ Keywords vs Identifiers
+// Keywords are reserved words in JS with special meaning (let, const, var, if, else, etc.)
+// Identifiers are user-defined names (like variable names).
 
-// keywords are special words that have a special meaning in a language
+// ✅ Variables store values in memory for reuse during program execution.
+// Primitives store direct values; Objects/arrays store references.
 
-// words are random words 
+// ✅ var, let, const – Key Differences
 
-// variables are used to store values in a program
-// it is made just to use the data stored in memory for reuse in the same program in the future for further execution of the program 
+// var (ES5)
+// - Function-scoped.
+// - Hoisted and initialized as undefined.
+// - Redeclaration allowed.
+// - Reassignment allowed.
+// - Should be avoided in modern JS.
 
-// let var const 
+var a;      // declaration (undefined due to hoisting)
+a = 12;     // first assignment (initialization)
+var a = 12; // redeclaration (allowed)
+a = 13;     // reassignment (allowed)
 
-// const no value change 
-// let and var 
-// var old way of declaring variables in js 
-// let is the new way of declaring variables in js
+// let (ES6)
+// - Block-scoped.
+// - Hoisted but in Temporal Dead Zone (TDZ).
+// - Redeclaration NOT allowed in the same scope.
+// - Reassignment allowed.
 
-//  var, let, and const – Line-by-Line Comparison
+let b;    // declaration
+b = 12;   // first assignment (initialization)
+b = 14;   // reassignment (allowed)
+// let b = 20;  // ❌ Error: no redeclaration in same scope
 
-// var = es5 feature 
-// let , const = es6 feature
+// const (ES6)
+// - Block-scoped.
+// - Hoisted but in TDZ.
+// - Must declare and initialize in the same line.
+// - No redeclaration.
+// - No reassignment.
 
-// var let const 
-a = 12; // global scoped variable , not block scoped , should not be practiced in modern js
-var a ; // declared (undefined due to hoisting to top of scope of variable declared )
-var a = 12 ; // initialized 
-var a = 13; // reinitialized or can say redclared also 
-a = 13 ; // reassigned 
-let a ; // declared 
-let a = 12; // initialized 
-a = 13 ; // reassigned
-let a = 13 ; 
-// const a ;
-// const a ;  error because const can't be declared and left for later reinitialization 
-// const variables are to be declared and initialized at the same time along with no access to reassignment of values which is allowed in let and var 
-const a = 12;
+const c = 13;
+// const c = 15;  // ❌ Error: cannot redeclare or reassign
+// c = 15;        // ❌ Error: assignment to constant variable
+
+// For const objects/arrays:
+const obj = { name: "Koushik" };
+obj.name = "Das";  // ✅ Allowed (object content mutable)
+
+var d = 12;
+// whenever we make a variable with var :- 
+
+
+// it is added to window , which means when it is declared actually outside a function , where it is not function scopeed , it will acvtually become a part of the global scope , which is it will become a property of the global object thats window , it cvan be accessed as windows.variable name which can result in getting overwritten by other scripts or getting into bugs. 
+
+// global objects basically means getting accessed by windows , the global varibale become the properties of the global object 
+
+// will always be function scoped , will be able to be accessed within a function in which is it declared , and wont be able to be accessed outside of the function 
+
+// can be redeclared and will not given an error 
+
+var aa = 12 ;
+var  aa = 14; // no error 
+let bb = 14;
+// let bb = 15; error 
+
+console.log(g); //undefined  - top of scope 
+var g ; 
+g = 12 ; 
+
+console.log(h); // ref error , cannot access let before initialization (TDZ)
+let h = 13 ; 
+
+console.log(i); // ref error , cannot access const before initialization (TDZ)
+const i = 4 ;
+
+
+
+
+
+
+
+
+
+
 
 
 
