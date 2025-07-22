@@ -56,6 +56,51 @@ console.log(typeof number);
 console.log(number instanceof  Number ); // false , doesn't work for primitives and only for references 
 
 
+let x = 3 ; 
+switch (x) {
+    case 1:
+        console.log("Hello 1 ");
+        break;
+    case 2:
+        console.log("Hello 2 ");
+        break;
+    case 3 :
+        console.log("Hello 3 ");
+        break;
+    default:
+        break;
+}
+
+
+
+
+
+let y = 1 ; 
+switch (y) {
+    case 1:
+        console.log("Hello 1 ");
+        // no break here 
+    case 2:
+        console.log("Hello 2 ");
+        // no break here 
+    case 3 :
+        console.log("Hello 3 ");
+        // no break here 
+    default:
+        console.log("Hello 4 ");
+        // no break here 
+// everything is getting printed if the break statement is not used at the right place  
+}
+
+function rps(user, computer){
+    if(user==computer) return "draw";
+    if((user=="rock" && computer=="scissor")
+        || (user=="scissor" && computer=="paper")|| (user=="paper" && computer=="rock")) return "user win";
+    return "computer win";
+
+}
+console.log(rps("paper", "rock"));
+
 
 
 
