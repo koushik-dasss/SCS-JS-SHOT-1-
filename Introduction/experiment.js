@@ -102,6 +102,13 @@ function rps(user, computer){
 console.log(rps("paper", "rock"));
 
 
+let i = 21 ; 
+do{
+    console.log(i);
+    i++;
+}while(i<20);
+
+
 
 
 
