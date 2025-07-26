@@ -40,16 +40,16 @@ for(let i = 1 ; i<= 50 ; i++){
     }
 }
 
-// let input = parseInt(20);
-// for(let i = 1 ; i<= input ; i++){
-//     if(i%2===0){
-//         console.log(i , " is even");
-//     }else{
-//         console.log(i , " is odd ");
+let input = parseInt(20);
+for(let i = 1 ; i<= input ; i++){
+    if(i%2===0){
+        console.log(i , " is even");
+    }else{
+        console.log(i , " is odd ");
         
-//     }
+    }
     
-// }
+}
 
 let input = prompt("Enter a number : ");
 for(let i = 1 ; i<= input ; i++){
