@@ -40,8 +40,8 @@ for(let i = 1 ; i<= 50 ; i++){
     }
 }
 
-let input = parseInt(20);
-for(let i = 1 ; i<= input ; i++){
+let input2 = parseInt(20);
+for(let i = 1 ; i<= input2 ; i++){
     if(i%2===0){
         console.log(i , " is even");
     }else{
@@ -51,15 +51,15 @@ for(let i = 1 ; i<= input ; i++){
     
 }
 
-let input = prompt("Enter a number : ");
-for(let i = 1 ; i<= input ; i++){
-    if(i%2===0){
-        console.log(`${i} is even`);
-    }else{
-        console.log(`${i} is odd`);
+// let input = prompt("Enter a number : ");
+// for(let i = 1 ; i<= input ; i++){
+//     if(i%2===0){
+//         console.log(`${i} is even`);
+//     }else{
+//         console.log(`${i} is odd`);
         
-    }
-}
+//     }
+// }
 
 
 
@@ -69,3 +69,20 @@ for(let i = 1 ; i<= 100 ; i++){
     }
 }
 
+function UglyNumber(n){
+    let n = 60;
+    if(n<=0){
+        return false;
+    }
+    while(n%2==0){
+        n/=2;
+    }
+   while(n%3==0){
+    n/=3;
+   }
+   while(n%5==0){
+    n/=5;
+   }
+   return n == 1 ;
+
+}
